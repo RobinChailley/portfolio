@@ -36,7 +36,7 @@ export const projects = [
 
 export default function Me() {
 	return (
-		<div className="max-w-[60vw]">
+		<div className="max-w-full flex items-center flex-col sm:max-w-[80vw]">
 			<h2 className="font-bold text-3xl text-center mb-6">
 				Who I{' '}
 				<span className="relative ">
@@ -44,10 +44,10 @@ export default function Me() {
 					am
 				</span>
 			</h2>
-			<p className="text-center dark:text-gray-400 ml-[10vw] max-w-[40vw]">
-				Passionate about programming since the end of secondary school, I've been coding in my spare and professional
-				time for over 10 years, mainly in Javascript. Closely linked to entrepreneurship, I love creating, inventing and
-				designing.
+			<p className="text-center dark:text-gray-400 px-12 max-w-full sm:px-0 sm:max-w-[60vw]">
+				Passionate about programming since the end of secondary school, I&apos;ve been coding in my spare and
+				professional time for over 10 years, mainly in Javascript. Closely linked to entrepreneurship, I love creating,
+				inventing and designing.
 			</p>
 			<div className="max-w-5xl mt-6 mx-auto px-8">
 				<HoverEffect items={projects} />
