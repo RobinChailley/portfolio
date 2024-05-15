@@ -60,10 +60,10 @@ const experiencesJson = [
 
 export default function Experiences() {
 	return (
-		<div>
-			<h2 className="font-bold text-3xl text-center mb-6">
+		<div className="px-12 md:px-0">
+			<h2 className="font-bold text-3xl text-center mb-12">
 				Where I{' '}
-				<span className="relative ">
+				<span className="relative">
 					<div className="absolute left-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-full" />
 					worked
 				</span>
@@ -76,7 +76,7 @@ export default function Experiences() {
 							<time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
 								{experience.date}
 							</time>
-							<p className="dark:text-gray-500 border-2 px-4 py-1 rounded-full ">Full Remote</p>
+							<p className="dark:text-gray-500 border-2 px-4 py-1 text-sm sm:text-base rounded-full ">Full Remote</p>
 						</div>
 						<h3 className="text-lg font-semibold text-gray-900 dark:text-white">{experience.name}</h3>
 						<p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
