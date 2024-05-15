@@ -36,7 +36,7 @@ export const projects = [
 
 export default function Me() {
 	return (
-		<div className="max-w-[60vw">
+		<div className="max-w-[60vw]">
 			<h2 className="font-bold text-3xl text-center mb-6">
 				Who I{' '}
 				<span className="relative ">
@@ -49,7 +49,7 @@ export default function Me() {
 				time for over 10 years, mainly in Javascript. Closely linked to entrepreneurship, I love creating, inventing and
 				designing.
 			</p>
-			<div className="max-w-5xl mx-auto px-8">
+			<div className="max-w-5xl mt-6 mx-auto px-8">
 				<HoverEffect items={projects} />
 			</div>
 		</div>

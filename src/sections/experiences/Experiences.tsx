@@ -62,10 +62,10 @@ export default function Experiences() {
 	return (
 		<div>
 			<h2 className="font-bold text-3xl text-center mb-6">
-				What I{' '}
+				Where I{' '}
 				<span className="relative ">
 					<div className="absolute left-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-full" />
-					did
+					worked
 				</span>
 			</h2>
 			<ol className="relative border-s border-gray-200 dark:border-gray-700">

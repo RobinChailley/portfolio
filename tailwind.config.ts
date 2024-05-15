@@ -1,5 +1,19 @@
 import type { Config } from 'tailwindcss';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('tailwindcss/colors');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette');
+
+function addVariablesForColors({ addBase, theme }: any) {
+	const allColors = flattenColorPalette(theme('colors'));
+	const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+	addBase({
+		':root': newVars,
+	});
+}
+
 const config = {
 	darkMode: ['selector'],
 	content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
@@ -69,7 +83,7 @@ const config = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'), addVariablesForColors],
 } satisfies Config;
 
 export default config;
