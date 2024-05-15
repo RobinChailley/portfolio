@@ -3,10 +3,8 @@ import SparklesCore from '@/components/aceternity/Sparkles';
 export default function CustomSparkles() {
 	return (
 		<div className="h-[60vh] mt-[20vh] w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-			<h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
-				Robin Chailley
-			</h1>
-			<h1 className="md:text-7xl text-3xl lg:text-4xl mt-3 font-bold text-center text-white/70 relative z-20">
+			<h1 className="text-6xl lg:text-6xl font-bold text-center text-white relative z-20">Robin Chailley</h1>
+			<h1 className="text-3xl lg:text-6xl mt-3 font-bold text-center text-white/70 relative z-20">
 				Fullstack Software Engineer
 			</h1>
 			<div className="w-[40rem] h-40 relative">

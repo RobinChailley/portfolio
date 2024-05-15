@@ -43,7 +43,7 @@ export function HoverEffect({
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
 	return (
-		<div className={cn('grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10', className)}>
+		<div className={cn('grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 py-10', className)}>
 			{items.map((item, idx) => (
 				<div
 					key={item.title + item.description}

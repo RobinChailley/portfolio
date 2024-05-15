@@ -1,7 +1,6 @@
 import CustomNavbarMenu from '@/sections/hero/CustomNavbarMenu';
 import CustomSparkles from '@/sections/hero/CustomSparkles';
 import React from 'react';
-import Skills from '@/sections/hero/Skills';
 import Experiences from '@/sections/experiences/Experiences';
 import Me from '@/sections/me/Me';
 import Contact from '@/sections/contact/Contact';
@@ -15,7 +14,6 @@ export default function Home() {
 			<div className="w-full h-[85vh]">
 				<CustomNavbarMenu />
 				<CustomSparkles />
-				<Skills />
 			</div>
 			<div id="experiences" className="pt-[15vh]">
 				<Experiences />
