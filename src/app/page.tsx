@@ -6,10 +6,12 @@ import Experiences from '@/sections/experiences/Experiences';
 import Me from '@/sections/me/Me';
 import Contact from '@/sections/contact/Contact';
 import Projects from '@/sections/projects/Projects';
+import DownloadCVButton from '@/components/ui/DownloadCVButton';
 
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between">
+			<DownloadCVButton />
 			<div className="w-full h-[85vh]">
 				<CustomNavbarMenu />
 				<CustomSparkles />
