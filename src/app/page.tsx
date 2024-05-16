@@ -20,7 +20,7 @@ export default function Home() {
 			<div id="experiences" className="pt-[15vh]">
 				<Experiences />
 			</div>
-			<div id="recommendations" className="pt-[15vh]">
+			<div id="testimonials" className="pt-[15vh]">
 				<Recommendations />
 			</div>
 			<div id="about-me" className="pt-[15vh] mt-24">
@@ -29,10 +29,10 @@ export default function Home() {
 			<div id="projects" className="pt-[15vh]">
 				<Projects />
 			</div>
-			<div id="contact" className="pt-[15vh] w-full h-[100vh]">
+			<div id="contact" className="pt-[15vh] w-full">
 				<Contact />
 			</div>
-			<footer className="border-[1px] items-center w-full gap-12 flex px-32 h-32">
+			<footer className="border-[1px] items-center w-full gap-12 flex px-6 sn:px-32 h-32">
 				<div className="flex flex-col h-full justify-center gap-3">
 					<p className="text-gray-400">©️2024 - Robin Chailley</p>
 					<p className="text-gray-400">Fullstack Software Engineer</p>

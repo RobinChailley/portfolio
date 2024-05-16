@@ -37,7 +37,7 @@ export const projects = [
 export default function Me() {
 	return (
 		<div className="max-w-full flex items-center flex-col sm:max-w-[80vw]">
-			<h2 className="font-bold text-3xl text-center mb-6">
+			<h2 className="font-bold text-3xl text-center mb-12">
 				Who I{' '}
 				<span className="relative ">
 					<div className="absolute left-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-full" />
@@ -49,7 +49,7 @@ export default function Me() {
 				professional time for over 10 years, mainly in Javascript. Closely linked to entrepreneurship, I love creating,
 				inventing and designing.
 			</p>
-			<div className="max-w-5xl mt-6 mx-auto px-8">
+			<div className="max-w-5xl mt-12 mx-auto px-8">
 				<HoverEffect items={projects} />
 			</div>
 		</div>

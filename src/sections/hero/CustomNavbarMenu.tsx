@@ -10,6 +10,7 @@ export default function Navbar({ className }: { className?: string }) {
 		<div className={cn('fixed px-6 md:px-0 top-10 inset-x-0 max-w-2xl mx-auto z-50', className)}>
 			<Menu setActive={setActive}>
 				<MenuItem setActive={setActive} active={active} href="#experiences" item="Experiences" />
+				<MenuItem setActive={setActive} active={active} href="#testimonials" item="Testimonials" />
 				<MenuItem setActive={setActive} active={active} href="#about-me" item="Me" />
 				<MenuItem setActive={setActive} active={active} href="#projects" item="Projects" />
 				<MenuItem setActive={setActive} active={active} href="#contact" item="Contact" />

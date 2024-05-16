@@ -52,15 +52,15 @@ const testimonials = [
 
 export default function Recommendations() {
 	return (
-		<div className="px-12 md:px-0">
-			<h2 className="font-bold text-3xl text-center mb-12">
+		<div>
+			<h2 className="px-12 font-bold text-3xl text-center mb-12">
 				What they thought{' '}
 				<span className="relative">
 					<div className="absolute left-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-full" />
-					about me
+					of me
 				</span>
 			</h2>
-			<div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+			<div className="rounded-md flex flex-col antialiased bg-black bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
 				<InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
 			</div>
 		</div>

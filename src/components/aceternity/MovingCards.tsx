@@ -12,6 +12,7 @@ export default function InfiniteMovingCards({
 }: {
 	items: {
 		quote: string;
+		quoteEn: string;
 		name: string;
 		title: string;
 	}[];
@@ -70,7 +71,7 @@ export default function InfiniteMovingCards({
 		<div
 			ref={containerRef}
 			className={cn(
-				'scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+				'scroller relative z-20 max-w-7xl w-[90vw] overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
 				className,
 			)}
 		>
@@ -95,7 +96,7 @@ export default function InfiniteMovingCards({
 								aria-hidden="true"
 								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
 							/>
-							<span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">{item.quote}</span>
+							<span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">{item.quoteEn}</span>
 							<div className="relative z-20 mt-6 flex flex-row items-center">
 								<span className="flex flex-col gap-1">
 									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>

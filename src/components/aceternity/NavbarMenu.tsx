@@ -15,11 +15,11 @@ export function MenuItem({
 	href: string;
 }) {
 	return (
-		<div className="relative ">
+		<div className="relative items-center flex">
 			<a
 				href={href}
 				onMouseEnter={() => setActive(item)}
-				className={cn('cursor-pointer text-white text-[14px] sm:text-lg ', {
+				className={cn('cursor-pointer text-white text-[12px] sm:text-lg ', {
 					'opacity-[0.8] ': item === active,
 				})}
 			>
@@ -42,7 +42,7 @@ export function Menu({ setActive, children }: { setActive: (item: string | null)
 		<nav
 			onMouseLeave={() => setActive(null)} // resets the state
 			className={cn(
-				'relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 sm:py-6 py-3 ',
+				'relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-2 sm:space-x-4 px-8 sm:py-6 py-3 ',
 			)}
 		>
 			{children}
