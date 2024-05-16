@@ -21,7 +21,7 @@ export default function Home() {
 			<div id="about-me" className="pt-[15vh] mt-24">
 				<Me />
 			</div>
-			<div id="projects" className="pt-[15vh] h-screen">
+			<div id="projects" className="pt-[15vh]">
 				<Projects />
 			</div>
 			<div id="contact" className="pt-[15vh] w-full h-[100vh]">
