@@ -7,5 +7,16 @@
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "react/no-unused-prop-types": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "@typescript-eslint/no-use-before-defined": "off",
   }
 }
