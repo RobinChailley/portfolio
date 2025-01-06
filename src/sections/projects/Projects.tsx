@@ -18,6 +18,42 @@ export default function Projects() {
 						description={
 							<>
 								<span>
+									Magnetly simplifies creating AI-powered tools like calculators to boost SEO and generate leads. Build
+									and embed custom tools in minutes, track performance, and optimize your acquisition strategy.
+								</span>
+								<br />
+								<br />
+								<span>
+									Trusted by leading companies like Submagic, Waalaxy, Breakcold, and Human Linker, Magnetly delivers
+									scalable solutions for impactful lead generation.
+								</span>
+								<br />
+								<br />
+								<span>
+									<em>A side project I actively develop alongside my work as a fullstack engineer.</em>
+								</span>
+								<br />
+								<br />
+								<a className={'underline'} href={'https://magnetly.co'} target="_blank" rel="noreferrer">
+									https://magnetly.co
+								</a>
+								<br />
+								<br />
+								<span className="flex gap-3">
+									<Image alt="stack" width={24} height={24} src="/nestjs.svg" />
+									<Image alt="stack" width={24} height={24} src="/python.png" />
+									<Image alt="stack" width={24} height={24} src="/react.png" />
+									<Image alt="stack" width={24} height={24} src="/typescript.png" />
+									<Image alt="stack" width={28} height={24} src="/firebase.png" />
+								</span>
+							</>
+						}
+						title="Magnetly"
+					/>
+					<Custom3DCard
+						description={
+							<>
+								<span>
 									PronoApp is a <strong>highly customizable CMS platform</strong> designed to enable sports tipsters to
 									create their own professional websites.
 								</span>
@@ -82,6 +118,8 @@ export default function Projects() {
 						}
 						title="Howsit"
 					/>
+				</div>
+				<div className="flex flex-col gap-3">
 					<Custom3DCard
 						description={
 							<>
@@ -92,11 +130,8 @@ export default function Projects() {
 								</span>
 								<br />
 								<br />
-								<span>Started as a side project six months ago, KuryAI combines innovation and practicality.</span>
-								<br />
-								<br />
 								<span>
-									<em>This project is still under progress.</em>
+									<em>This project has been aborted.</em>
 								</span>
 								<br />
 								<br />
@@ -110,8 +145,6 @@ export default function Projects() {
 						}
 						title="KuryAI"
 					/>
-				</div>
-				<div className="flex flex-col gap-3">
 					<Custom3DCard
 						description={
 							<>
@@ -171,6 +204,7 @@ export default function Projects() {
 						}
 						title="Epijob"
 					/>
+
 					<Custom3DCard
 						description={
 							<>
