@@ -18,19 +18,19 @@ const testimonials = [
 	},
 	{
 		quote:
-			"Nous avons recruté Robin CHAILLEY en tant que stagiaire, afin de sécuriser par l'intermédiaire de jeux de test unitaire et de non régression, une application permettant de gérer les organisations commerciales au sein d'un CRM (Customer Relationship Management). Robin CHAILLEY a fait preuve d'une très bonne adaptation, d'une bonne autonomie et d'une bonne expertise dans son travail qui lui ont permis par la suite d'atteindre les objectifs fixés et même les dépasser.",
+			"Nous avons recruté Robin CHAILLEY en tant que stagiaire, afin de sécuriser par l'intermédiaire de jeux de test unitaire et de non régression, une application permettant de gérer les organisations commerciales au sein d'un CRM. Robin CHAILLEY a fait preuve d'une très bonne adaptation, d'une bonne autonomie et d'une bonne expertise dans son travail.",
 		quoteEn:
-			'We recruited Robin CHAILLEY as an intern, to use unit tests and non-regression tests to secure an application for managing sales organizations within a CRM (Customer Relationship Management) system. Robin CHAILLEY showed great adaptability, autonomy and expertise in his work, which enabled him to meet and even exceed the objectives set.',
+			'We recruited Robin CHAILLEY as an intern to secure a CRM application using unit and non-regression tests. Robin showed great adaptability, autonomy and expertise, enabling him to meet and even exceed the objectives set.',
 		name: 'Alexandre F',
-		title: 'Senior Software Engineer - La Poste',
+		title: 'Senior Software Engineer · La Poste',
 	},
 	{
 		quote:
 			"Robin à réalisé des pages internet, toujours un travail de qualité, ce qui en fait sa force. Afin d'augmenter les performances et la sécurité de notre plateforme web, nous avons contacté Robin pour réaliser cette mission. Réactif, impliqué et rigoureux, rien à redire sur le travail effectué.",
 		quoteEn:
-			"Robin's strength lies in the quality of his work. To increase the performance and security of our web platform, we contacted Robin to carry out this mission. Responsive, involved and rigorous, there's nothing to fault in the work he's done.",
+			"Robin's strength lies in the quality of his work. To increase the performance and security of our web platform, we contacted Robin to carry out this mission. Responsive, involved and rigorous, there's nothing to fault.",
 		name: 'Antoine',
-		title: 'CEO QuickCells',
+		title: 'CEO · QuickCells',
 	},
 	{
 		quote:
@@ -38,7 +38,7 @@ const testimonials = [
 		quoteEn:
 			"I highly recommend Robin's professional and human skills! Robin integrated perfectly into the team and delivered high-quality work. Excellent!",
 		name: 'Hugo',
-		title: 'CEO Origame',
+		title: 'CEO · Origame',
 	},
 	{
 		quote:
@@ -46,21 +46,18 @@ const testimonials = [
 		quoteEn:
 			'Great work with Robin, who understood my needs and delivered a quality product. Special mention to the document delivered with the site, which makes it easier to use. Thank you',
 		name: 'Damien MP',
-		title: 'CEO ExpertClub',
+		title: 'CEO · ExpertClub',
 	},
 ];
 
 export default function Recommendations() {
 	return (
 		<div>
-			<h2 className="px-12 font-bold text-3xl text-center mb-12">
-				What they thought{' '}
-				<span className="relative">
-					<div className="absolute left-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-full" />
-					of me
-				</span>
-			</h2>
-			<div className="rounded-md flex flex-col antialiased bg-black bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+			<div className="text-center mb-12">
+				<p className="text-emerald-400 text-xs font-medium tracking-widest uppercase mb-3">Testimonials</p>
+				<h2 className="text-3xl font-bold text-white">What they said</h2>
+			</div>
+			<div className="flex flex-col antialiased items-center justify-center relative overflow-hidden">
 				<InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
 			</div>
 		</div>

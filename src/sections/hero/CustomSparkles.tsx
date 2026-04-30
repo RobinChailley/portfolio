@@ -1,31 +1,30 @@
-import SparklesCore from '@/components/aceternity/Sparkles';
+'use client';
 
-export default function CustomSparkles() {
+import { motion } from 'framer-motion';
+
+export default function Hero() {
 	return (
-		<div className="h-[60vh] mt-[20vh] w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-			<h1 className="text-6xl lg:text-6xl font-bold text-center text-white relative z-20">Robin Chailley</h1>
-			<h1 className="text-3xl lg:text-6xl mt-3 font-bold text-center text-white/70 relative z-20">
-				Fullstack Software Engineer
-			</h1>
-			<div className="w-[40rem] h-40 relative">
-				<div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-				<div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-				<div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-				<div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+		<div className="h-[60vh] mt-[20vh] w-full flex flex-col items-center justify-center px-6 relative overflow-hidden">
+			{/* Glow orb */}
+			<motion.div
+				className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[160px] sm:w-[500px] sm:h-[240px] bg-emerald-500/25 rounded-full blur-[60px] sm:blur-[80px] pointer-events-none"
+				animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+				transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+			/>
 
-				{/* Core component */}
-				<SparklesCore
-					background="transparent"
-					minSize={0.4}
-					maxSize={1}
-					particleDensity={1200}
-					className="w-full h-full"
-					particleColor="#FFFFFF"
-				/>
-
-				{/* Radial Gradient to prevent sharp edges */}
-				<div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]" />
-			</div>
+			<motion.div
+				initial={{ opacity: 0, y: 24 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+				className="text-center relative z-10"
+			>
+				<h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white">Robin Chailley</h1>
+				<p className="text-xl sm:text-2xl text-neutral-400 mt-5 font-normal">Fullstack Software Engineer</p>
+				<p className="mt-8 text-sm text-neutral-500 text-center">
+					<span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse align-middle mr-2.5" />
+					8+ years of experience · Entrepreneur · Successful exit
+				</p>
+			</motion.div>
 		</div>
 	);
 }

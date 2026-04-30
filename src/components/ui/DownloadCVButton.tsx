@@ -5,10 +5,10 @@ export default function DownloadCVButton() {
 		<a
 			href="/Robin_Chailley_CV.pdf"
 			download="Robin_Chailley_CV.pdf"
-			className="right-6 min-w-fit bottom-6 group transition-all duration-1000 fixed rounded-full opacity-30 hover:opacity-100 border-[1px] border-white flex items-center justify-center p-2"
+			className="right-6 bottom-6 group fixed flex items-center gap-2 bg-neutral-900 border border-neutral-700 hover:border-emerald-400/50 text-neutral-400 hover:text-white rounded-full px-4 py-2.5 transition-all duration-300 text-sm"
 		>
-			<span className="px-4 transition-all duration-1000 hidden group-hover:inline-flex">Download CV</span>
-			<Download />
+			<Download size={15} />
+			<span>Download CV</span>
 		</a>
 	);
 }

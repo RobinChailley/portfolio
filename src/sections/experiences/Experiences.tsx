@@ -1,11 +1,26 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const experiencesJson = [
 	{
+		name: 'Lead Engineer, Siana',
+		date: 'Jun 2025 - Apr 2026',
+		description: 'Lead engineer on an AI-based mobile app for real estate. Siana is a proptech startup building AI-powered tools for the real estate market.',
+		stack: ['nestjs.svg', 'firebase.png', 'react.png', 'typescript.png'],
+	},
+	{
+		name: 'CTO & Co-founder, Magnetly',
+		date: 'Jul 2024 - Nov 2025',
+		description: 'Co-founded Magnetly as CTO alongside a business partner. Led the technical vision and development of an AI-powered lead generation platform. Successfully exited the company.',
+		stack: ['nestjs.svg', 'firebase.png', 'react.png', 'typescript.png'],
+	},
+	{
 		name: 'Lead Software Engineer (Freelance), TrackIt',
-		date: 'Mar 2023 - Today',
-		description: 'From scratch development of complex software for a major American customer',
+		date: 'Mar 2023 - Mar 2025',
+		description: 'From scratch development of complex software for a major American customer.',
 		stack: ['javascript.png', 'typescript.png', 'react.png'],
 	},
 	{
@@ -50,43 +65,34 @@ const experiencesJson = [
 		description: 'Writing non-regression tests for a customer portfolio management software.',
 		stack: ['python.png'],
 	},
-	// {
-	// 	name: 'Bac +5, Epitech',
-	// 	date: 'Oct 2017 - Jun 2022',
-	// 	description: 'Earned a Bac +5 in Computer Science from Epitech, emphasizing hands-on project-based learning.',
-	// 	stack: [],
-	// },
 ];
 
+const VISIBLE_COUNT = 4;
+
 export default function Experiences() {
+	const [expanded, setExpanded] = useState(false);
+	const visible = expanded ? experiencesJson : experiencesJson.slice(0, VISIBLE_COUNT);
+
 	return (
 		<div className="px-12 md:px-0">
-			<h2 className="font-bold text-3xl text-center mb-12">
-				Where I{' '}
-				<span className="relative">
-					<div className="absolute left-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-full" />
-					worked
-				</span>
-			</h2>
-			<ol className="relative border-s border-gray-200 dark:border-gray-700">
-				{experiencesJson.map((experience, experienceIndex) => (
-					<li key={experience.name} className="mb-10 ms-4">
-						<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-						<div className="flex justify-between items-center">
-							<time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-								{experience.date}
-							</time>
-							<p className="dark:text-gray-500 border-2 px-4 py-1 text-sm sm:text-base rounded-full ">Full Remote</p>
-						</div>
-						<h3 className="text-lg font-semibold text-gray-900 dark:text-white">{experience.name}</h3>
-						<p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{experience.description}</p>
+			<div className="text-center mb-12">
+				<p className="text-emerald-400 text-xs font-medium tracking-widest uppercase mb-3">Career</p>
+				<h2 className="text-3xl font-bold text-white">Where I worked</h2>
+			</div>
+			<ol className="relative border-s border-neutral-800">
+				{visible.map((experience, experienceIndex) => (
+					<li key={experience.name} className="mb-10 ms-6">
+						<div className="absolute w-2 h-2 bg-emerald-400 rounded-full mt-2 -start-1 border-2 border-[#0c0c0c]" />
+						<time className="text-xs text-neutral-500 font-mono">{experience.date}</time>
+						<h3 className="text-white font-semibold mt-1">{experience.name}</h3>
+						<p className="text-neutral-400 text-sm mt-1 mb-3">{experience.description}</p>
 						<div className="flex flex-row gap-3">
 							{experience.stack.map((stack, stackIndex) => (
 								<Image
 									key={`${stack}${stackIndex}${experienceIndex}`}
 									alt="stack"
-									width={24}
-									height={24}
+									width={20}
+									height={20}
 									src={`/${stack}`}
 								/>
 							))}
@@ -94,6 +100,16 @@ export default function Experiences() {
 					</li>
 				))}
 			</ol>
+			<button
+				onClick={() => setExpanded(!expanded)}
+				className="mt-2 ms-6 flex items-center gap-2 text-sm text-neutral-500 hover:text-white transition-colors duration-200"
+			>
+				{expanded ? (
+					<><ChevronUp size={15} /> Show less</>
+				) : (
+					<><ChevronDown size={15} /> {experiencesJson.length - VISIBLE_COUNT} more experiences</>
+				)}
+			</button>
 		</div>
 	);
 }

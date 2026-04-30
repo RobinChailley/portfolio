@@ -7,6 +7,7 @@ import Contact from '@/sections/contact/Contact';
 import Projects from '@/sections/projects/Projects';
 import DownloadCVButton from '@/components/ui/DownloadCVButton';
 import Recommendations from '@/sections/recommendations/Recommendations';
+import FadeIn from '@/components/ui/FadeIn';
 import { Github, Linkedin } from 'lucide-react';
 
 export default function Home() {
@@ -17,33 +18,44 @@ export default function Home() {
 				<CustomNavbarMenu />
 				<CustomSparkles />
 			</div>
-			<div id="experiences" className="pt-[15vh]">
+			<FadeIn id="experiences" className="pt-[15vh] max-w-2xl w-full px-6 md:px-0">
 				<Experiences />
-			</div>
-			<div id="testimonials" className="pt-[15vh]">
+			</FadeIn>
+			<FadeIn id="testimonials" className="pt-[15vh] w-full">
 				<Recommendations />
-			</div>
-			<div id="about-me" className="pt-[15vh] mt-24">
+			</FadeIn>
+			<FadeIn id="about-me" className="pt-[15vh] mt-12 w-full flex justify-center">
 				<Me />
-			</div>
-			<div id="projects" className="pt-[15vh]">
+			</FadeIn>
+			<FadeIn id="projects" className="pt-[15vh] w-full flex justify-center">
 				<Projects />
-			</div>
-			<div id="contact" className="pt-[15vh] w-full">
+			</FadeIn>
+			<FadeIn id="contact" className="pt-[15vh] w-full">
 				<Contact />
-			</div>
-			<footer className="border-[1px] items-center w-full gap-12 flex px-6 sn:px-32 h-32">
-				<div className="flex flex-col h-full justify-center gap-3">
-					<p className="text-gray-400">©️2024 - Robin Chailley</p>
-					<p className="text-gray-400">Fullstack Software Engineer</p>
+			</FadeIn>
+			<footer className="border-t border-neutral-800 w-full px-6 sm:px-12 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+				<div className="flex flex-col gap-1">
+					<p className="text-white font-medium">Robin Chailley</p>
+					<p className="text-neutral-500 text-sm">Fullstack Software Engineer</p>
 				</div>
-				<div className="flex flex-col h-full justify-center gap-3">
-					<a className="text-gray-400" target="_blank" href="https://www.linkedin.com/in/robin-chailley/">
-						<Linkedin />
-					</a>
-					<a className="text-gray-400" target="_blank" href="https://github.com/RobinChailley">
-						<Github />
-					</a>
+				<div className="flex flex-col gap-2 items-start sm:items-end">
+					<div className="flex items-center gap-4">
+						<a
+							className="text-neutral-500 hover:text-white transition-colors"
+							target="_blank"
+							href="https://www.linkedin.com/in/robin-chailley/"
+						>
+							<Linkedin size={18} />
+						</a>
+						<a
+							className="text-neutral-500 hover:text-white transition-colors"
+							target="_blank"
+							href="https://github.com/RobinChailley"
+						>
+							<Github size={18} />
+						</a>
+					</div>
+					<p className="text-neutral-600 text-xs">© {new Date().getFullYear()} Robin Chailley</p>
 				</div>
 			</footer>
 		</main>

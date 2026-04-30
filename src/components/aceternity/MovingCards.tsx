@@ -85,22 +85,15 @@ export default function InfiniteMovingCards({
 			>
 				{items.map((item) => (
 					<li
-						className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
-						style={{
-							background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
-						}}
+						className="w-[350px] max-w-full relative rounded-xl border border-neutral-800 bg-neutral-900 flex-shrink-0 px-8 py-6 md:w-[420px]"
 						key={item.name}
 					>
 						<blockquote>
-							<div
-								aria-hidden="true"
-								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-							/>
-							<span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">{item.quoteEn}</span>
+							<span className="relative z-20 text-sm leading-relaxed text-neutral-300 font-normal">{item.quoteEn}</span>
 							<div className="relative z-20 mt-6 flex flex-row items-center">
-								<span className="flex flex-col gap-1">
-									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.name}</span>
-									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">{item.title}</span>
+								<span className="flex flex-col gap-0.5">
+									<span className="text-sm text-white font-medium">{item.name}</span>
+									{item.title && <span className="text-xs text-neutral-500">{item.title}</span>}
 								</span>
 							</div>
 						</blockquote>
