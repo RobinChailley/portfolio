@@ -9,6 +9,7 @@ export default function InfiniteMovingCards({
 	speed = 'fast',
 	pauseOnHover = true,
 	className,
+	lang = 'en',
 }: {
 	items: {
 		quote: string;
@@ -20,6 +21,7 @@ export default function InfiniteMovingCards({
 	speed?: 'fast' | 'normal' | 'slow';
 	pauseOnHover?: boolean;
 	className?: string;
+	lang?: 'en' | 'fr';
 }) {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -89,7 +91,7 @@ export default function InfiniteMovingCards({
 						key={item.name}
 					>
 						<blockquote>
-							<span className="relative z-20 text-sm leading-relaxed text-neutral-300 font-normal">{item.quoteEn}</span>
+							<span className="relative z-20 text-sm leading-relaxed text-neutral-300 font-normal">{lang === 'fr' ? item.quote : item.quoteEn}</span>
 							<div className="relative z-20 mt-6 flex flex-row items-center">
 								<span className="flex flex-col gap-0.5">
 									<span className="text-sm text-white font-medium">{item.name}</span>

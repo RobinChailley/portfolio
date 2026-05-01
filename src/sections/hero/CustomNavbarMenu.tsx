@@ -3,17 +3,21 @@
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-
-const links = [
-	{ label: 'Experience', href: '#experiences' },
-	{ label: 'Testimonials', href: '#testimonials' },
-	{ label: 'About', href: '#about-me' },
-	{ label: 'Projects', href: '#projects' },
-	{ label: 'Contact', href: '#contact' },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
+import { ui } from '@/lib/i18n';
 
 export default function Navbar({ className }: { className?: string }) {
 	const [open, setOpen] = useState(false);
+	const { lang } = useLanguage();
+	const t = ui[lang].nav;
+
+	const links = [
+		{ label: t.experience, href: '#experiences' },
+		{ label: t.testimonials, href: '#testimonials' },
+		{ label: t.about, href: '#about-me' },
+		{ label: t.projects, href: '#projects' },
+		{ label: t.contact, href: '#contact' },
+	];
 
 	return (
 		<nav className={cn('fixed top-8 inset-x-0 z-50 px-6 flex justify-center', className)}>
