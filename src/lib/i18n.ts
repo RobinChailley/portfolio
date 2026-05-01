@@ -1,7 +1,7 @@
 import { Lang } from '@/contexts/LanguageContext';
 
 export const ui: Record<Lang, {
-	hero: { subtitle: string; tagline: string };
+	hero: { badge: string; subtitle: string; tagline: string };
 	nav: { experience: string; testimonials: string; about: string; projects: string; contact: string };
 	career: { label: string; title: string; showMore: (n: number) => string; showLess: string };
 	about: { label: string; title: string; bio: string };
@@ -13,6 +13,7 @@ export const ui: Record<Lang, {
 }> = {
 	en: {
 		hero: {
+			badge: 'Creator & CTO of Magnetly — Acquired in 2025',
 			subtitle: 'Fullstack Software Engineer',
 			tagline: '8+ years of experience · Entrepreneur · Successful exit',
 		},
@@ -52,6 +53,7 @@ export const ui: Record<Lang, {
 	},
 	fr: {
 		hero: {
+			badge: 'Créateur & CTO de Magnetly — Rachat en 2025',
 			subtitle: 'Ingénieur Logiciel Fullstack',
 			tagline: "8+ ans d'expérience · Entrepreneur · Exit réussi",
 		},

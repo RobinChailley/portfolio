@@ -21,6 +21,10 @@ export default function Hero() {
 				transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
 				className="text-center relative z-10"
 			>
+				<div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium rounded-full px-4 py-1.5 mb-6">
+					<span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+					{t.badge}
+				</div>
 				<h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white">Robin Chailley</h1>
 				<p className="text-xl sm:text-2xl text-neutral-400 mt-5 font-normal">{t.subtitle}</p>
 				<p className="mt-8 text-sm text-neutral-500 text-center">

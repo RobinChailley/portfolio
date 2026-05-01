@@ -5,7 +5,6 @@ import Experiences from '@/sections/experiences/Experiences';
 import Me from '@/sections/me/Me';
 import Contact from '@/sections/contact/Contact';
 import Projects from '@/sections/projects/Projects';
-import DownloadCVButton from '@/components/ui/DownloadCVButton';
 import Recommendations from '@/sections/recommendations/Recommendations';
 import FadeIn from '@/components/ui/FadeIn';
 import Footer from '@/components/ui/Footer';
@@ -14,8 +13,7 @@ import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between">
-			<DownloadCVButton />
-			<LanguageSwitcher />
+<LanguageSwitcher />
 			<div className="w-full h-[85vh]">
 				<CustomNavbarMenu />
 				<CustomSparkles />
