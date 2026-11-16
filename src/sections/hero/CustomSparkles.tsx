@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ui } from '@/lib/i18n';
 
@@ -21,6 +22,14 @@ export default function Hero() {
 				transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
 				className="text-center relative z-10"
 			>
+				<Image
+					src="/portrait.jpg"
+					alt="Robin Chailley"
+					width={112}
+					height={112}
+					priority
+					className="mx-auto mb-6 w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border border-emerald-500/20"
+				/>
 				<div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium rounded-full px-4 py-1.5 mb-6">
 					<span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
 					{t.badge}
