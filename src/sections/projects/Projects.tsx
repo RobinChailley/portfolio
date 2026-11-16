@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Lang, useLanguage } from '@/contexts/LanguageContext';
 import { ui } from '@/lib/i18n';
-import { Lang } from '@/contexts/LanguageContext';
+import StackIcon from '@/components/ui/StackIcon';
 
-interface StackIcon { src: string; width?: number }
+interface StackItem { src: string; width?: number }
 
 const projects: {
 	id: string;
@@ -17,8 +16,27 @@ const projects: {
 	description: Record<Lang, string>;
 	note?: Record<Lang, string>;
 	aborted?: boolean;
-	stack: StackIcon[];
+	stack: StackItem[];
 }[] = [
+	{
+		id: 'airdun',
+		title: 'AirDun',
+		href: 'https://airdun.com/',
+		colSpan: 'md:col-span-3',
+		metrics: '~€3,000/month MRR',
+		description: {
+			en: "AirDun is a SaaS that automatically recovers failed Stripe payments. Its autopilot analyzes the context of each failure, picks the action, channel and timing of each reminder, then adapts the follow-up to the customer's replies. Reminders stop as soon as the payment goes through.",
+			fr: "AirDun est un SaaS de recouvrement automatisé des paiements Stripe échoués. Son autopilote analyse le contexte de chaque échec, choisit l'action, le canal et le moment de la relance, puis adapte la suite en fonction des réponses du client. Les relances s'arrêtent dès que le paiement aboutit.",
+		},
+		note: {
+			en: "CTO since June 2026, leading the product's technical development.",
+			fr: 'CTO depuis juin 2026, je pilote le développement technique du produit.',
+		},
+		stack: [
+			{ src: '/nestjs.svg' }, { src: '/python.png' }, { src: '/react.png' },
+			{ src: '/typescript.png' }, { src: '/firebase.png', width: 24 },
+		],
+	},
 	{
 		id: 'magnetly',
 		title: 'Magnetly',
@@ -26,12 +44,12 @@ const projects: {
 		colSpan: 'md:col-span-2',
 		metrics: '1,000+ users · €2,000/month MRR at peak',
 		description: {
-			en: 'Magnetly simplifies creating AI-powered tools like calculators to boost SEO and generate leads. Build and embed custom tools in minutes, track performance, and optimize your acquisition strategy. Trusted by leading companies like Submagic, Waalaxy, Breakcold, and Human Linker.',
-			fr: "Magnetly simplifie la création d'outils IA comme des calculateurs pour booster le SEO et générer des leads. Construisez et intégrez des outils personnalisés en quelques minutes, suivez les performances et optimisez votre stratégie d'acquisition. Approuvé par des entreprises comme Submagic, Waalaxy, Breakcold et Human Linker.",
+			en: 'Magnetly is a SaaS that lets marketing teams create interactive tools with AI, such as calculators, embed them on their website and track their performance to generate leads. Trusted by leading companies like Submagic, Waalaxy, Breakcold, and Human Linker.',
+			fr: "Magnetly est un SaaS qui permet aux équipes marketing de créer des outils interactifs avec l'IA, comme des calculateurs, de les intégrer à leur site et de suivre leurs performances pour générer des leads. Approuvé par des entreprises comme Submagic, Waalaxy, Breakcold et Human Linker.",
 		},
 		note: {
-			en: 'Co-founded as CTO alongside a business partner. Successfully exited the company in 2025.',
-			fr: 'Co-fondé en tant que CTO avec un associé. Exit réussi en 2025.',
+			en: 'Co-founded the product and led its development as CTO. Sold in 2025.',
+			fr: "J'ai cofondé le produit et piloté son développement en tant que CTO. Revendu en 2025.",
 		},
 		stack: [
 			{ src: '/nestjs.svg' }, { src: '/python.png' }, { src: '/react.png' },
@@ -156,11 +174,13 @@ export default function Projects() {
 								{lang === 'en' ? 'Project aborted.' : 'Projet abandonné.'}
 							</p>
 						)}
-						<div className="flex flex-row gap-3 mt-1">
-							{project.stack.map((icon, i) => (
-								<Image key={i} alt="stack" width={icon.width ?? 20} height={20} src={icon.src} />
-							))}
-						</div>
+						{project.stack.length > 0 && (
+							<div className="flex flex-row gap-3 mt-1">
+								{project.stack.map((icon, i) => (
+									<StackIcon key={i} src={icon.src} width={icon.width} />
+								))}
+							</div>
+						)}
 					</div>
 				))}
 			</div>

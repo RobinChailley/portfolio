@@ -17,6 +17,6 @@
     "react/no-unused-prop-types": "off",
     "react-hooks/exhaustive-deps": "off",
     "react/jsx-no-constructed-context-values": "off",
-    "@typescript-eslint/no-use-before-defined": "off",
+    "@typescript-eslint/no-use-before-defined": "off"
   }
 }

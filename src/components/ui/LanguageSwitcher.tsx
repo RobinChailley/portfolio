@@ -8,6 +8,7 @@ export default function LanguageSwitcher() {
 
 	return (
 		<button
+			type="button"
 			onClick={() => setLang(next)}
 			className="left-6 bottom-6 fixed flex items-center gap-2 bg-neutral-900 border border-neutral-700 hover:border-emerald-400/50 text-neutral-400 hover:text-white rounded-full px-4 py-2.5 transition-all duration-300 text-sm"
 		>

@@ -13,7 +13,7 @@ export const ui: Record<Lang, {
 }> = {
 	en: {
 		hero: {
-			badge: 'Creator & CTO of Magnetly — Acquired in 2025',
+			badge: 'CTO at AirDun · Sold Magnetly in 2025',
 			subtitle: 'Fullstack Software Engineer',
 			tagline: '8+ years of experience · Entrepreneur · Successful exit',
 		},
@@ -53,7 +53,7 @@ export const ui: Record<Lang, {
 	},
 	fr: {
 		hero: {
-			badge: 'Créateur & CTO de Magnetly — Rachat en 2025',
+			badge: "CTO d'AirDun · Magnetly revendu en 2025",
 			subtitle: 'Ingénieur Logiciel Fullstack',
 			tagline: "8+ ans d'expérience · Entrepreneur · Exit réussi",
 		},

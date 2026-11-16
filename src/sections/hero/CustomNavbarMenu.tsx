@@ -37,6 +37,7 @@ export default function Navbar({ className }: { className?: string }) {
 			{/* Mobile */}
 			<div className="sm:hidden w-full flex flex-col items-end">
 				<button
+					type="button"
 					onClick={() => setOpen(!open)}
 					className="bg-neutral-900/80 backdrop-blur-md border border-neutral-800 rounded-full p-2.5 text-neutral-400 hover:text-white transition-colors"
 				>
